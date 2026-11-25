@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="피클 전용 페이지 — A팀 투자 리포트 보드 모음">
+<title>피클 페이지</title>
+<style>
+  :root{
+    --navy:#10304f; --ink:#1c3a5c; --muted:#7a8798; --line:#dde4ec; --bg:#eef1f5;
+    --card:#ffffff; --accent:#1f5fd0; --accent2:#0d766e; --pm:#5b3f8f;
+    --shadow:0 1px 2px rgba(16,48,79,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --navy:#eaf1f8; --ink:#dbe6f1; --muted:#93a3b5; --line:#26313d; --bg:#12181f; --card:#1a222b;
+      --accent:#6da2ff; --accent2:#41c2b6; --pm:#b79bea;
+      --shadow:0 1px 2px rgba(0,0,0,.25);
+    }
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--navy);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",system-ui,"Segoe UI",Roboto,sans-serif;
+    -webkit-text-size-adjust:100%;
+    padding:max(28px, env(safe-area-inset-top)) 16px calc(28px + env(safe-area-inset-bottom));
+    line-height:1.6;
+  }
+  .wrap{max-width:640px;margin:0 auto}
+  .eyebrow{font-size:11.5px;font-weight:800;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+  h1{margin:6px 0 6px;font-size:27px;letter-spacing:-.02em;line-height:1.25}
+  .sub{margin:0 0 20px;font-size:14px;color:var(--muted)}
+
+  a.card{
+    display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit;
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:16px 16px;margin:0 0 12px;box-shadow:var(--shadow);transition:transform .12s ease;
+  }
+  a.card:active{transform:scale(.99)}
+  .ico{
+    flex:0 0 auto;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+    font-size:21px;background:color-mix(in srgb, var(--accent) 12%, transparent);
+  }
+  .ico.two{background:color-mix(in srgb, var(--pm) 12%, transparent)}
+  .txt{min-width:0}
+  .txt strong{display:block;font-size:16.5px;letter-spacing:-.01em}
+  .txt span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+  .arrow{margin-left:auto;color:var(--muted);font-size:19px;font-weight:700}
+
+  .badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+  .badge{font-size:11.5px;font-weight:800;border-radius:999px;padding:3px 9px;border:1px solid var(--line);color:var(--muted)}
+  .badge.pm{color:var(--pm);border-color:color-mix(in srgb, var(--pm) 38%, transparent);background:color-mix(in srgb, var(--pm) 10%, transparent)}
+
+  footer{border-top:1px solid var(--line);margin-top:26px;padding-top:14px;font-size:11.5px;color:var(--muted);line-height:1.7}
+  footer b{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Pickle Pages</div>
+  <h1>피클 페이지</h1>
+  <p class="sub">피클이 관리하는 페이지 모음입니다. 아래에서 원하는 보드를 열어 주세요.</p>
+
+  <a class="card" href="./invest/">
+    <div class="ico">📊</div>
+    <div class="txt">
+      <strong>투자 리포트 보드</strong>
+      <span>A팀 다각도 종목·시장 분석 — 뮤즈 · 인스팅트 · 큐 · 피클(PM)</span>
+      <div class="badges">
+        <span class="badge pm">피클 PM 총괄</span>
+        <span class="badge">샘플 데이터</span>
+      </div>
+    </div>
+    <span class="arrow" aria-hidden="true">›</span>
+  </a>
+
+  <footer>
+    <b>피클 · A팀</b> — 이 페이지는 피클이 운영하는 전용 공개 페이지입니다.<br>
+    투자 리포트 보드의 수치는 각 리포트에 적힌 기준일 기준이며, 분석은 참고 자료일 뿐 투자 조언이 아닙니다.
+  </footer>
+</div>
+</body>
+</html>
